@@ -1,4 +1,4 @@
-name: sml_environment
+name: sml_env
 channels:
   - defaults
   - conda-forge
@@ -10,5 +10,4 @@ dependencies:
       - dagshub
       - pandas
       - scikit-learn
-      - prometheus-client
-      - flask
+      - numpy
