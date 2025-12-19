@@ -7,9 +7,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-# ==========================================
+
 # 1. PERSIAPAN DATA (LOAD DATA)
-# ==========================================
+
 # Diatur ke folder root karena file train_clean.csv akan diletakkan di dalam folder MLProject
 dataset_path = "train_clean.csv"
 
@@ -79,3 +79,4 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(best_model, "model_random_forest_tuned")
 
     print("✅ Model dan metrik berhasil disimpan ke MLflow Artifacts.")
+
