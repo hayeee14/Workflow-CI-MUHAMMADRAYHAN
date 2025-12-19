@@ -1,0 +1,38 @@
+name: Automasi MLOps (Training Model)
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build-and-train:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # Tambahkan dagshub jika kamu menggunakannya untuk tracking
+        pip install pandas scikit-learn mlflow dagshub
+
+    - name: Run Model Training
+      run: |
+        # Menggunakan python langsung dengan path agar lebih aman
+        python MLProject/modelling.py
+
+    - name: Upload MLflow Artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: model-hasil-training
+        
+        path: mlruns/
