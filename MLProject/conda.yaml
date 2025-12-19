@@ -1,0 +1,14 @@
+name: sml_environment
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - mlflow
+      - dagshub
+      - pandas
+      - scikit-learn
+      - prometheus-client
+      - flask

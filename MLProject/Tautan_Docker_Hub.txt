@@ -1,0 +1,6 @@
+Model Packaging (Containerization) telah dilakukan secara otomatis menggunakan CI/CD (GitHub Actions).
+
+Bukti Container/Artifact model dapat dilihat pada:
+1. Tab 'Actions' di Repository GitHub ini.
+2. Pilih workflow terbaru.
+3. Scroll ke bawah pada bagian 'Artifacts' untuk mengunduh model yang sudah terbungkus (model-hasil-training).

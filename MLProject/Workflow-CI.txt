@@ -1,0 +1,6 @@
+Bukti Workflow CI/CD Berhasil:
+https://github.com/hayeee14/Workflow-CI/actions
+
+Daftar Repositori Terpisah:
+1. Repositori Preprocessing (K1): https://github.com/hayeee14/Exsperimen_SML_Rayhan
+2. Repositori Workflow-CI (K3): https://github.com/hayeee14/Workflow-CI
